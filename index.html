@@ -159,7 +159,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/06/29/b/" class="post-title-link" itemprop="url">b</a>
+            <a href="/2020/06/29/b/" class="post-title-link" itemprop="url">个人简历</a>
         </h2>
 
         <div class="post-meta">
@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-06-29 10:04:00 / Modified: 11:59:05" itemprop="dateCreated datePublished" datetime="2020-06-29T10:04:00+08:00">2020-06-29</time>
+              <time title="Created: 2020-06-29 10:04:00 / Modified: 15:32:03" itemprop="dateCreated datePublished" datetime="2020-06-29T10:04:00+08:00">2020-06-29</time>
             </span>
 
           
@@ -184,66 +184,35 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>是对的😂</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/29/a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/29/a/" class="post-title-link" itemprop="url">a</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-06-29 09:17:09 / Modified: 09:29:51" itemprop="dateCreated datePublished" datetime="2020-06-29T09:17:09+08:00">2020-06-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>hjhjas</p>
+          <h5 id="面试自我介绍"><a href="#面试自我介绍" class="headerlink" title="面试自我介绍"></a>面试自我介绍</h5><p>面试官您好，我叫周锐，来自中南大学计算机学院，专业是计算机科学与技术。在校期间熟悉了计算机基础内容，如数据结构，算法，计算机网络等。目前在华为实习。</p>
+<p>项目方面主要是为了熟悉SpringBoot自己驱动学习完成的一个社区交流平台，主要功能有登录注册，发送内容，系统通知，全局搜索这些基本功能，并基于此自己做了一些性能优化。其次就是应用所学跟着辅导员一起完成了一个综测录入系统，主要负责登录注册模块以及初始化的信息，现在系统有近2000人使用。</p>
+<p>在校期间，积极学习，在大二的第一学期结束接触ACM，并在大二结束进入校队，出校打过两场区域赛，最好的成绩是铜牌。并且参加各种组织，负责学院办公室的日常处理。</p>
+<h5 id="教育经历"><a href="#教育经历" class="headerlink" title="教育经历"></a>教育经历</h5><p>中南大学 计算机科学与技术 本科</p>
+<h5 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h5><h6 id="讨论区交流平台-–-独立后台开发"><a href="#讨论区交流平台-–-独立后台开发" class="headerlink" title="讨论区交流平台 – 独立后台开发"></a>讨论区交流平台 – 独立后台开发</h6><p><strong>1. 该项目主要是个人为了提升对于Spring Boot的理解，后台开发的业务流程进行的一个实战项目。</strong></p>
+<ul>
+<li>项目利用了Spring Boot + Mysql + Redis + FreeMarker进行开发，采用了MVC的模式思想，利用Json进行数据交换，采用Git进行版本控制，仓库部署在github上。</li>
+<li>数据库交互myBatis集成进行数据库的创建以及交互<br>在登录注册的时候利用MD5加盐算法对密码进行加密解密，同时利用拦截器，在Cookie中加入token和用户的信息进行关联。<br>在信息发布的时候利用前缀树进行敏感词过滤，优化复杂度。<br>利用Redis实现对于讨论区的赞踩以及关注功能并优化登录注册功能<br>通过排序算法，实现挑选出较好的评论或者帖子<br>利用kafka实现发送系统通知<br>利用Elasticsearch配合kafka实现社区搜索加亮显示功能<ul>
+<li>中南大学信息院综合测评系统 –后台开发人员<ul>
+<li>该系统（ims）由信息院学生发起，16级辅导员负责业务功能把控。旨在为中南大学信息学院的学生提供一个方便进行学年综合测 评与其他校园活动（请假，心理测评等）的平台。现已投入使用，部署在阿里云上，目前在迭代更新。</li>
+<li>负责了登录模块的功能以及初始化界面信息展示功能的实现，具体在登录注册这块使用了MD5加盐算法进行加密解密，在mysql数据库中不存储明文以及通过拦截器，获取用户的session信息，判断登录状态，保证其他页面的登录需要。<br>前后端分离，使用Springboot+Mysql+Maven，Restful Api。Git进行版本控制，协同开发。RAP2文档管理。项目仓库部署 在腾讯开发者平台上</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="获奖"><a href="#获奖" class="headerlink" title="获奖"></a>获奖</h5><p>全国大学生CCPC湘潭邀请赛铜奖</p>
+<p>全国天梯赛珠峰争鼎区湖南赛区三等奖</p>
+<p>美国大学生数学建模竞赛二等奖</p>
+<p>中南大学十三届升华杯学科竞赛 二等奖</p>
+<p>中南大学程序设计竞赛以及天梯赛 二等奖</p>
+<p>中南大学校级三等奖学金，优秀团员以及中南大学勤助先进个人</p>
+<h5 id="专业技能"><a href="#专业技能" class="headerlink" title="专业技能"></a>专业技能</h5><ul>
+<li>编程语言：Java(掌握) / c++ (基础，用于acm编程) / JavaScript(基础) / Python(了解)  </li>
+<li>Web开发：Java web(掌握)，jsp(了解)，HTML(基础)，css(基础)  </li>
+<li>框架：Spring boot(掌握) / bootstrap(了解) / React (基础)  </li>
+<li>数据库相关：MySQL(应用) / SQLServer(了解)   </li>
+<li>主修课程：Java语言与系统设计，数据结构，算法分析与设计，数据库原理，计算机网络，操作系统等</li>
+</ul>
 
       
     </div>
@@ -395,7 +364,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
