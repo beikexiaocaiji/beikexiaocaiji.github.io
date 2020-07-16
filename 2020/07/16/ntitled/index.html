@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="1.equals方法与hashCode    (1)&#x3D;&#x3D; 与 equals方法的区别    &#x3D;&#x3D; 比较的是对象的引用，如果equals方法没有重写的话，默认就是&#x3D;&#x3D;方法    （2）hashCode方法的作用    如果全部调用equals方法，如在Set中插入一个对象会造成很大的负担。    应先判断hashcode再调用equals方法。    （3）equals方法与hashCode">
+  <meta name="description" content="Java多线程1.进程与线程    程序是静态的概念    （1）进程就是正在执行的程序，比如说使用QQ    （2）线程就是进程更细的划分，比如说QQ里面的音乐，视频，聊天等等。    一个进程就占有一个方法区和堆，各个线程共享，也就是一个进程有多个线程并行。    线程各自有自己的虚拟机栈和程序计数器，共享资源因此相互通信很方便，但是访问资源是并发，有安全隐患。    引入：并发和并行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Object类">
-<meta property="og:url" content="http://yoursite.com/2020/07/15/ntitled/index.html">
+<meta property="og:title" content="Java多线程">
+<meta property="og:url" content="http://yoursite.com/2020/07/16/ntitled/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.equals方法与hashCode    (1)&#x3D;&#x3D; 与 equals方法的区别    &#x3D;&#x3D; 比较的是对象的引用，如果equals方法没有重写的话，默认就是&#x3D;&#x3D;方法    （2）hashCode方法的作用    如果全部调用equals方法，如在Set中插入一个对象会造成很大的负担。    应先判断hashcode再调用equals方法。    （3）equals方法与hashCode">
+<meta property="og:description" content="Java多线程1.进程与线程    程序是静态的概念    （1）进程就是正在执行的程序，比如说使用QQ    （2）线程就是进程更细的划分，比如说QQ里面的音乐，视频，聊天等等。    一个进程就占有一个方法区和堆，各个线程共享，也就是一个进程有多个线程并行。    线程各自有自己的虚拟机栈和程序计数器，共享资源因此相互通信很方便，但是访问资源是并发，有安全隐患。    引入：并发和并行">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-15T15:30:55.000Z">
-<meta property="article:modified_time" content="2020-07-15T15:31:45.328Z">
+<meta property="article:published_time" content="2020-07-16T15:31:20.000Z">
+<meta property="article:modified_time" content="2020-07-16T15:31:30.539Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/15/ntitled/">
+<link rel="canonical" href="http://yoursite.com/2020/07/16/ntitled/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>Object类 | Hexo</title>
+  <title>Java多线程 | Hexo</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/15/ntitled/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/16/ntitled/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Object类
+          Java多线程
         </h1>
 
         <div class="post-meta">
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-07-15 23:30:55 / Modified: 23:31:45" itemprop="dateCreated datePublished" datetime="2020-07-15T23:30:55+08:00">2020-07-15</time>
+              <time title="Created: 2020-07-16 23:31:20 / Modified: 23:31:30" itemprop="dateCreated datePublished" datetime="2020-07-16T23:31:20+08:00">2020-07-16</time>
             </span>
 
           
@@ -188,7 +188,76 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>1.equals方法与hashCode<br>    (1)== 与 equals方法的区别<br>    == 比较的是对象的引用，如果equals方法没有重写的话，默认就是==方法<br>    （2）hashCode方法的作用<br>    如果全部调用equals方法，如在Set中插入一个对象会造成很大的负担。<br>    应先判断hashcode再调用equals方法。<br>    （3）equals方法与hashCode<br>    hashcode不等，则equals方法为false，两个对象肯定不相等；<br>    hashcode相等，equals方法不确定，两个对象可能相等也可能不相等；<br>    （4）因此重写equals方法必须重写hashCode,不重写equals方法相等，<br>    hashcode不同，就会在hashSet中放入相同的元素  </p>
+        <p>Java多线程<br>1.进程与线程<br>    程序是静态的概念<br>    （1）进程就是正在执行的程序，比如说使用QQ<br>    （2）线程就是进程更细的划分，比如说QQ里面的音乐，视频，聊天等等。<br>    一个进程就占有一个方法区和堆，各个线程共享，也就是一个进程有多个线程并行。<br>    线程各自有自己的虚拟机栈和程序计数器，共享资源因此相互通信很方便，但是访问资源是并发，有安全隐患。<br>    引入：并发和并行<br>        并发，多个人干一件事；<br>        并行，多个人干多件事；<br>    （3）多线程的意义<br>        进程与进程之间切换开销大，但是线程之间开销小，可以减少CPU切换开销。<br>        同时CPU多核处理多线程，效率也会提高。<br>    一个Java程序，至少三个线程：main方法，异常处理，垃圾回收线程。</p>
+<p>2.线程的启用<br>  （1）继承Thread类<br>        步骤：继承Thread类，重写run方法，创建对象调用start方法<br>        //匿名内部类就是直接用构造器，{}内添加自己写的东西，没有对象名字<br>         new Thread(){<br>            @Override<br>            public void run() {<br>                System.out.println(“hhh”);<br>            }<br>        }.start();<br>        注意：对象直接调用run方法不会产生多线程，多次调用start方法会报错<br>  （2）实现Runnable接口<br>        步骤：实现Runnable接口，实现run方法，创建线程对象，再将线程对象作为参数传入Thread类构造器，调用start方法。<br>        class MyThread implements Runnable{<br>        @Override<br>        public void run() {<br>                System.out.println(“jjj”);<br>            }<br>        }<br>        //这是静态代理模式，MyThread和Thread类都实现Runnable接口<br>        //创建目标对象<br>        MyThread myThread = new MyThread();<br>        //创建代理对象<br>        Thread thread = new Thread(myThread);<br>        thread.start();<br>    （3）创建方式的比较<br>        继承Thread类有局限性，无法继承其他类，<br>        实现Runnable接口更灵活，同时可以创建多个代理对象，天然共享Runnable对象数据不用加static<br>    （4）线程的优先级<br>        注意线程的优先级表示的是概率，优先级高抢占CPU的概率高，同时不一定优先级高要完成以后才做优先级低的<br>    （5）线程的状态<br>        一定要画图分析清楚，什么方法，什么情况会转换状态<br>        初始态（NEW）:创建对象，还没调用start方法<br>        就绪台（READY）：调用start方法，只要有CPU执行权就可以执行<br>        运行态（RUNNING）：有CPU执行权，正在执行<br>        等待态（WAITING）：<br>        超时等待态（TIME_WAITING）：<br>        阻塞态（BLOCKED）：<br>        终止态（TERMINATED）：线程运行完毕<br>    （6）线程的分类<br>        分为守护线程和用户线程。守护线程是为用户线程服务，不会单独存在。<br>        例如main方法的主线程就是用户线程，GC垃圾回收线程就是守护线程</p>
+<p>3.线程安全问题：<br>    概述：一个线程在操作某个资源的过程中还没结束，另一个线程进入。导致共享数据错误<br>    解决:<br>    (1)synchronized<br>        synchronized可以同步很多，根据是作为锁的对象不同<br>        主要是同步代码块和同步方法<br>        一定要注意锁定的是对象而不是代码，多线程只有拿到同一个对象，同步才生效！！<br>        同步代码块：<br>            private int ticket = 100;<br>            //锁对象不能为NULL<br>            private Object object = new Object();</p>
+<pre><code>        @Override
+        public void run() {
+            while (true){
+            //synchronized (MyThread.class)通过当前类.class充当对象比较方便！！
+            //this对象继承类实现的线程，同步也不会生效
+                synchronized (object){
+                    if (ticket &gt; 0){
+                        System.out.println(Thread.currentThread().getName() + &quot; &quot; + ticket);
+                        ticket--;
+                    }
+                }
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    同步方法：只需要在方法上加synchronized关键字
+    其实其中也有锁：普通方法是调用run方法的当前对象，静态方法是当前类.class
+                注意this对象继承类实现的线程，同步也不会生效
+
+    引入单例模式懒汉式线程安全解决办法：
+    （1）同步方法，效率较差
+public static synchronized Singleton getSingleton(){
+    if (singleton == null){
+        singleton = new Singleton();
+    }
+    return singleton;
+}
+
+    （2）同步代码块，加上进入其之前的判断，效果较好
+public static Singleton getSingleton(){
+    if (singleton == null) {
+        synchronized (Singleton.class) {
+            if (singleton == null){
+                singleton = new Singleton();
+            }
+        }
+    }
+    return singleton;
+}    
+
+（2）lock机制解决
+JDK5以后新增，也可以解决同步问题
+步骤：创建ReentrantLock对象，调用lock方法上锁，紧跟要同步try块，finally加上unlock方法解锁
+private ReentrantLock lock = new ReentrantLock();
+@Override
+public void run() {
+    while (true){
+        lock.lock();
+        try {
+            if (ticket &gt; 0){
+                System.out.println(Thread.currentThread().getName() + &quot; &quot; + ticket);
+                ticket--;
+            }
+        } finally {
+            lock.unlock();
+        }
+    }
+}
+（3）lock与synchronized的区别
+相同：两者都能实现互斥和重入（也就是加锁之后解锁之前，已得到该锁的单线程可以调用使用同一把锁的其他方法，
+此时线程就会持有多把相同的锁）
+区别：synchronized是JVM实现，lock是JDK实现
+    lock有其他更高级的用法（如公平锁，释放锁之后让等待线程先到先得），但是基本功能还是用synchronized
+    因为后者能自动释放锁</code></pre><p>4.死锁问题<br>    线程之间相互占有对方需要的资源，拿着对方需要的锁（好比我拿着你的筷子，你拿着我的筷子，大家吃不了饭，释放不了筷子）<br>    造成等待浪费资源</p>
 
     </div>
 
