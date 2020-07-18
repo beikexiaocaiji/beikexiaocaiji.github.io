@@ -20,15 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/07/index.html">
+  <meta name="description" content="String类1.String类的不可变性    （1）不可变性的目的        1.提高效率，字面量存在方法区常量池中，可以多个引用指向一个字面量。        2.安全。很多文件路劲，URL都是String。而且不可变天生就是线程安全    （2）不可变的含义        String是final类，不可被继承重写，确保不会有方法修改值；        实现是final char[]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="String类">
+<meta property="og:url" content="http://yoursite.com/2020/07/18/ntitled/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="String类1.String类的不可变性    （1）不可变性的目的        1.提高效率，字面量存在方法区常量池中，可以多个引用指向一个字面量。        2.安全。很多文件路劲，URL都是String。而且不可变天生就是线程安全    （2）不可变的含义        String是final类，不可被继承重写，确保不会有方法修改值；        实现是final char[]">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-18T15:30:19.000Z">
+<meta property="article:modified_time" content="2020-07-18T15:30:47.620Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/archives/2020/07/">
+<link rel="canonical" href="http://yoursite.com/2020/07/18/ntitled/">
 
 
 <script id="page-configurations">
@@ -36,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Hexo</title>
+  <title>String类 | Hexo</title>
   
 
 
@@ -139,130 +143,90 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 7 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/18/ntitled/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          String类
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-07-18 23:30:19 / Modified: 23:30:47" itemprop="dateCreated datePublished" datetime="2020-07-18T23:30:19+08:00">2020-07-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
+        <p>String类<br>1.String类的不可变性<br>    （1）不可变性的目的<br>        1.提高效率，字面量存在方法区常量池中，可以多个引用指向一个字面量。<br>        2.安全。很多文件路劲，URL都是String。而且不可变天生就是线程安全<br>    （2）不可变的含义<br>        String是final类，不可被继承重写，确保不会有方法修改值；<br>        实现是final char[] value的字符数组，属性被赋值就不会更改；<br>    （3）字面量<br>        直接放到方法区<br>    （3）new构造器方式<br>        构造器会在堆里创建一个对象（这一步必须要），然后常量池没有就复制一份到常量池<br>    （5）字符串拼接（“+”或substring）<br>        常量与常量拼接放在方法区；<br>        有变量拼接就在堆中创建一个对象，不会放到常量池（注意final）<br>        intern 方法会从字符串常量池中查询当前字符串是否存在，<br>        若不存在就会将当前字符串放入常量池中，并且返回常量引用；<br>        若存在则什么都不干。</p>
+<pre><code>    引入：    public static void main(String[] args) throws ExecutionException, InterruptedException {
+                String s1 = &quot;abc&quot;;
+                change(s1);
+                System.out.println(s1);
+            }
+            private static void change(String s1) {
+                s1 = &quot;abcd&quot;;
+                System.out.println(s1);
+            }
+        值传递与字符串不变性的范例
+    引入：编译期优化：final值和字面量由于编译期知道且不会再被更改，因此编译时会直接运算好且换成常量
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-18T23:30:19+08:00"
-              content="2020-07-18">
-          07-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/07/18/ntitled/" itemprop="url">
-            <span itemprop="name">String类</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-12T22:52:52+08:00"
-              content="2020-07-12">
-          07-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/07/12/ava%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" itemprop="url">
-            <span itemprop="name">Java基础笔记</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-07T15:24:53+08:00"
-              content="2020-07-07">
-          07-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/07/07/%E5%A4%8D%E7%94%A8%E7%B1%BB/" itemprop="url">
-            <span itemprop="name">复用类</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-04T22:10:08+08:00"
-              content="2020-07-04">
-          07-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/07/04/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/" itemprop="url">
-            <span itemprop="name">反射机制</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-07-01T22:53:56+08:00"
-              content="2020-07-01">
-          07-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/07/01/Mybatis01/" itemprop="url">
-            <span itemprop="name">Mybatis 学习01</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+（3）、（4）、（5）记得画图输出</code></pre><p>2.StringBuffer和StringBuilder类<br>    它们也都是final类，但它们可变 char[] value；<br>    （1）它们的区别：<br>        StringBuffer是线程安全，因为它的方法synchronized修饰，StringBuilder是线程不安全，所以效率更高<br>    （2）与String的交互<br>        也就是“+”字符串拼接，这是语法糖不是运算符重载。<br>        本质就是String转换为StringBuffer或StringBuilder，再调用append（），最后toString。<br>        因此for循环中，不要用“+”字符串拼接，直接用StringBuffer或StringBuilder，然后调用append（）</p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/12/ava%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" rel="prev" title="Java基础笔记">
+      <i class="fa fa-chevron-left"></i> Java基础笔记
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
