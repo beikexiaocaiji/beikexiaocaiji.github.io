@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="1.注解的含义：    注解是源代码以外标注的特殊信息，通过编译，运行和类加载读取，并执行相关操作    注解可看做是元数据，元数据就是标识数据的数据2.注解的应用：    （1）生成相关文档，如@author、@version等    （2）编译时检查；@Override、@Deprecated、@SuppressWarnings。JDK自带的三个基本注解    （3）运行时反射进行解析，比如使">
+  <meta name="description" content="1.泛型的意义：    泛型之前使用Object[]数组存储元素，由于单根继承，所有元素都可以存储，    但是向下转型有安全隐患而且需要判断。泛型，即类型参数化，如集合中要像传参一般注明参数，    这样编译期编译器就会类型检查，避免了运行时的类型转换错误更加安全，同时不用判断更加简洁。  2.泛型的应用    （1）集合当中，注意泛型应该尽量使用，不要用原生类型    （2）类与接口，与一般情">
 <meta property="og:type" content="article">
-<meta property="og:title" content="注解">
-<meta property="og:url" content="http://yoursite.com/2020/07/19/ntitled/index.html">
+<meta property="og:title" content="泛型">
+<meta property="og:url" content="http://yoursite.com/2020/07/24/ntitled/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.注解的含义：    注解是源代码以外标注的特殊信息，通过编译，运行和类加载读取，并执行相关操作    注解可看做是元数据，元数据就是标识数据的数据2.注解的应用：    （1）生成相关文档，如@author、@version等    （2）编译时检查；@Override、@Deprecated、@SuppressWarnings。JDK自带的三个基本注解    （3）运行时反射进行解析，比如使">
+<meta property="og:description" content="1.泛型的意义：    泛型之前使用Object[]数组存储元素，由于单根继承，所有元素都可以存储，    但是向下转型有安全隐患而且需要判断。泛型，即类型参数化，如集合中要像传参一般注明参数，    这样编译期编译器就会类型检查，避免了运行时的类型转换错误更加安全，同时不用判断更加简洁。  2.泛型的应用    （1）集合当中，注意泛型应该尽量使用，不要用原生类型    （2）类与接口，与一般情">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-19T15:00:35.000Z">
-<meta property="article:modified_time" content="2020-07-19T15:01:01.156Z">
+<meta property="article:published_time" content="2020-07-24T15:22:08.000Z">
+<meta property="article:modified_time" content="2020-07-24T15:22:18.226Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/19/ntitled/">
+<link rel="canonical" href="http://yoursite.com/2020/07/24/ntitled/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>注解 | Hexo</title>
+  <title>泛型 | Hexo</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/19/ntitled/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/24/ntitled/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          注解
+          泛型
         </h1>
 
         <div class="post-meta">
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-07-19 23:00:35 / Modified: 23:01:01" itemprop="dateCreated datePublished" datetime="2020-07-19T23:00:35+08:00">2020-07-19</time>
+              <time title="Created: 2020-07-24 23:22:08 / Modified: 23:22:18" itemprop="dateCreated datePublished" datetime="2020-07-24T23:22:08+08:00">2020-07-24</time>
             </span>
 
           
@@ -188,7 +188,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>1.注解的含义：<br>    注解是源代码以外标注的特殊信息，通过编译，运行和类加载读取，并执行相关操作<br>    注解可看做是元数据，元数据就是标识数据的数据<br>2.注解的应用：<br>    （1）生成相关文档，如@author、@version等<br>    （2）编译时检查；@Override、@Deprecated、@SuppressWarnings。JDK自带的三个基本注解<br>    （3）运行时反射进行解析，比如使用注解替代配置文件<br>3.JDK的元注解<br>    就是修饰注解的注解<br>    （1）@Retention：表示注解的生命周期，SOURCE在源文件中有效，编译时抛弃，只是做编译检查：<br>        CLASS在class文件中有效，运行时抛弃（默认），可以编译生成辅助代码；<br>        RUNTIME在运行时有效，只有它才可反射解析<br>    （2）@Target：用于指定被修饰的Annotation能用于修饰哪些程序元素<br>    （3）@Documented: 修饰的Annotation将被javadoc工具提取成文档<br>    （4）@Inherited: 修饰的Annotation将具有继承性<br>4.JDK8新特性：<br>    可重复注解、注解可用于包括类型等所有地方</p>
+        <p>1.泛型的意义：<br>    泛型之前使用Object[]数组存储元素，由于单根继承，所有元素都可以存储，<br>    但是向下转型有安全隐患而且需要判断。泛型，即类型参数化，如集合中要像传参一般注明参数，<br>    这样编译期编译器就会类型检查，避免了运行时的类型转换错误更加安全，同时不用判断更加简洁。 </p>
+<p>2.泛型的应用<br>    （1）集合当中，注意泛型应该尽量使用，不要用原生类型<br>    （2）类与接口，与一般情况基本相同，泛型可以作为方法的参数和返回值，或是作为域和局部变量的类型<br>        例如操作数据库，不同的表对应不同对象，BaseDAO用泛型<br>        如果父类有泛型，<br>        要么指定，如class SubOrder extends Order<String>，导出类不再是泛型<br>        要么保留，如ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable<br>        还可以自己增加泛型，所以是富二代。<br>    （3）泛型方法，方法中的类型参数只有调用时才能确定，例如查询数据库表的每一列信息<br>    （4）通配符：有上下界：extends指定类型必为自身或其子类 super指定类型必为自身或其父类<br>            记住读用extends，写用super</E></E></E></String></p>
+<p>3.泛型的约束：<br>    （1）不能指定基本数据类型，可以指定包装类，因为类型擦除为Object<br>    （2）禁止使用带有类型变量的静态域和方法，因为类型擦除，静态域只有一份<br>    （3）类型参数不能用在catch，异常类也不能是泛型，因为异常处理是运行时解决，但是没有泛型信息<br>    （4）instanceof运行时类型查询不能是泛型<br>    （5）List<String> list1和List<Object> list2不具有继承关系，因为有隐含的类型安全问题，<br>        List2 = list1; lis2.add(123);与List<String>产生矛盾<br>        解决办法List<?>,相当于List<String>和List<Object>的父类，
+        注意List<Object>确定是Object类，List<?>包含的元素类型是不确定，只能读取其中元素，不能向其中添加元素</Object></Object></String></String></Object></String></p>
+<p>3.泛型的实现：类型擦除<br>    Java运行时没有任何泛型信息，泛型类对应同一份字节码文件，如ArrayList<Integer>与ArrayList<String>就是同一个类，<br>    原因在于编译器在编译之后类型擦除：将所有的泛型参数用其最顶级的父类型（没有指定就是Object）类型替换。<br>    因此Java没有代码膨胀，但也说明泛型是语法糖<br>    （1）如果类型擦除导致重写方法丢失，编译器会自动书写桥接方法；如需要插入类型转换以保持类型安全<br>    （2）大部分泛型的约束都与类型擦除有关<br>    （3）避免泛型类和原始类型的混用，确实需要开发遗留代码，尽可能隔离；<br>        泛型类最好不要同数组一块使用，需要类似数组功能用集合类代替</String></Integer></p>
 
     </div>
 
@@ -204,13 +208,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/07/12/ava%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" rel="prev" title="Java基础笔记">
-      <i class="fa fa-chevron-left"></i> Java基础笔记
+    <a href="/2020/07/22/%E9%83%A8%E7%B1%BB/" rel="prev" title="内部类">
+      <i class="fa fa-chevron-left"></i> 内部类
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/21/%E9%94%AE%E5%AD%97/" rel="next" title="关键字">
-      关键字 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
